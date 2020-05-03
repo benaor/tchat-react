@@ -13,31 +13,36 @@ class Connexion extends Component {
         this.setState({ pseudo })
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault()
+    handleSubmit = event => {
+        event.preventDefault();
         this.setState({ goToChat: true })
     }
 
     render() {
-        if (this.state.goToChat) {
-            return <Redirect to={`/pseudo/${this.state.pseudo}`} />
-        }
 
+        if (this.state.goToChat) {
+            return (<Redirect to={`/pseudo/${this.state.pseudo}`} />)
+        }
 
         return (
             <div className="connexionBox">
-                <form className="connexion">
+                <form
+                 className="connexion"
+                 onSubmit={this.handleSubmit} >
                     <input
                         value={this.state.pseudo}
                         onChange={this.handleChange}
-                        onSubmit={this.handleSubmit}
                         placeholder="pseudo"
                         type="text"
                         required />
-                    <button type="submit">GO</button>
+                    <button
+                        type="submit">
+                        GO
+                    </button>
                 </form>
             </div>
         )
+
     }
 }
 
