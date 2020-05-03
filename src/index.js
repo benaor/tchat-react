@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
+import NotFound from './components/NotFound'
 import Connexion from './components/Connexion'
 import * as serviceWorker from './serviceWorker'
 
@@ -14,6 +15,7 @@ const Root = () => (
 
             <Route exact path="/" component={Connexion} />
             <Route path="/pseudo/:pseudo" component={App} />
+            <Route  component={NotFound} />
 
         </Switch>
 
