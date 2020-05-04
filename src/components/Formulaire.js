@@ -17,7 +17,7 @@ class Formulaire extends Component {
         addMessage(message)
 
         //Reset du formulaire
-        this.setState({ message : ' ', length})
+        this.setState({ message: ' ', length })
     }
 
     handleChange = event => {
@@ -32,7 +32,7 @@ class Formulaire extends Component {
     }
 
     handleKeyUp = (event) => {
-        if(event.key === 'Enter') {
+        if (event.key === 'Enter') {
             this.createMessage()
         }
     }
@@ -51,8 +51,8 @@ class Formulaire extends Component {
                     onKeyUp={this.handleKeyUp}
                 />
                 <div className="info" >
-                    { this.state.length } 
-                  </div>
+                    {this.state.length}
+                </div>
                 <button type="submit" >
                     Envoyer !
                   </button>
