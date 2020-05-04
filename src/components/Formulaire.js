@@ -14,6 +14,9 @@ class Formulaire extends Component {
         }
 
         addMessage(message)
+
+        //Reset du formulaire
+        this.setState({ message : ''})
     }
 
     handleChange = event => {
