@@ -30,6 +30,15 @@ class App extends Component {
   addMessage = message => {
     const messages = { ... this.state.messages }
     messages[`message-${Date.now()}`] = message
+
+    //on garde les 10 derniers messages
+    Object
+      .keys(messages)
+      .slice(0, -10)
+      .forEach(key => {
+        messages[key] = null
+      })
+
     this.setState({ messages })
   }
 
