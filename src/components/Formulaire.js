@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class Formulaire extends Component {
     state = {
-        message: ''
+        message: '',
+        length: this.props.length
     }
 
     createMessage = () => {
@@ -16,7 +17,7 @@ class Formulaire extends Component {
         addMessage(message)
 
         //Reset du formulaire
-        this.setState({ message : ''})
+        this.setState({ message : ' '})
     }
 
     handleChange = event => {
