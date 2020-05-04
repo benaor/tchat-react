@@ -22,7 +22,8 @@ class Formulaire extends Component {
 
     handleChange = event => {
         const message = event.target.value
-        this.setState({ message })
+        const length = this.props.length - message.length
+        this.setState({ message, length })
     }
 
     handleSubmit = (event) => {
@@ -40,10 +41,10 @@ class Formulaire extends Component {
                     value={this.state.message}
                     onChange={this.handleChange}
                     required
-                    maxLength="140"
+                    maxLength={this.props.length}
                 />
                 <div className="info" >
-                    140
+                    { this.state.length } 
                   </div>
                 <button type="submit" >
                     Envoyer !
