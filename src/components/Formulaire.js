@@ -31,6 +31,12 @@ class Formulaire extends Component {
         this.createMessage()
     }
 
+    handleKeyUp = (event) => {
+        if(event.key === 'Enter') {
+            this.createMessage()
+        }
+    }
+
     render() {
 
         return (
@@ -42,6 +48,7 @@ class Formulaire extends Component {
                     onChange={this.handleChange}
                     required
                     maxLength={this.props.length}
+                    onKeyUp={this.handleKeyUp}
                 />
                 <div className="info" >
                     { this.state.length } 
