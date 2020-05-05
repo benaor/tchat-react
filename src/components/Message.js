@@ -14,7 +14,7 @@ const Message = ({ pseudo, message, isUser }) => {
 
         return (
             <p className="not-user-message">
-                {message}
+                <strong>{pseudo} : </strong> {message}
             </p>
         )
     }
