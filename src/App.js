@@ -55,7 +55,7 @@ class App extends Component {
       .map(key => (
 
         <CSSTransition 
-        timeout={2000}
+        timeout={200}
         classNames='fade'
         key={key}>
 
